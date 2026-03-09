@@ -179,7 +179,7 @@ function Hero() {
 
           <div className="hero-social">
             <a
-              href="https://github.com"
+              href="https://github.com/abhikdps"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -189,7 +189,7 @@ function Hero() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/abhinav-anand-2709/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -199,7 +199,7 @@ function Hero() {
               </svg>
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/i_abhinav_"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
