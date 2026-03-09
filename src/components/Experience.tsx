@@ -10,7 +10,7 @@ const experiences = [
     id: 1,
     company: "Red Hat",
     role: "Software Engineer",
-    period: "Oct 2025 - Present",
+    period: "Oct 2024 - Present",
     location: "Bengaluru, India",
     description:
       "Full-stack engineer in the Ansible Platform Experience team, building frontend and backend services for Backstage plugins that power developer platforms and automation workflows.",
@@ -28,7 +28,7 @@ const experiences = [
     id: 2,
     company: "MapleLabs Solutions",
     role: "Software Engineer",
-    period: "Aug 2023 - Oct 2025",
+    period: "Aug 2023 - Oct 2024",
     location: "Bengaluru, India",
     description:
       "Worked on nFerence Labs and Cisco Tetration projects, developing automation scripts and Kubernetes migrations.",

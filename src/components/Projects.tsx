@@ -206,7 +206,7 @@ function Projects() {
         <div className="projects-cta">
           <p>Want to see more?</p>
           <a
-            href="https://github.com"
+            href="https://github.com/abhikdps"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline"
