@@ -1,0 +1,231 @@
+.skills {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.skills-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-tertiary);
+  max-width: 500px;
+  margin: var(--space-lg) auto 0;
+}
+
+.skills-marquee {
+  overflow: hidden;
+  padding: var(--space-xl) 0;
+  margin-bottom: var(--space-xl);
+  background: linear-gradient(
+    90deg,
+    var(--color-void) 0%,
+    transparent 10%,
+    transparent 90%,
+    var(--color-void) 100%
+  );
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  gap: var(--space-xl);
+  white-space: nowrap;
+}
+
+.marquee-item {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: color var(--transition-fast);
+}
+
+.marquee-item:hover {
+  color: var(--color-cyan);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.skill-category {
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-category:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--border-subtle);
+}
+
+.category-icon {
+  font-size: 1.5rem;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.skill-level {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
+.skill-progress {
+  height: 4px;
+  background: var(--color-elevated);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  background: var(--progress-color, var(--color-cyan));
+  border-radius: 2px;
+  position: relative;
+}
+
+.skill-progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background: white;
+  opacity: 0.5;
+  border-radius: 2px;
+}
+
+.skills-hex-section {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.hex-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.skills-hex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hex-item {
+  width: 140px;
+  height: 80px;
+  background: var(--color-surface);
+  border: var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transition: all var(--transition-base);
+  cursor: default;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hex-item span {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hex-item:hover {
+  background: var(--color-cyan);
+  transform: scale(1.1);
+}
+
+.hex-item:hover span {
+  color: var(--color-void);
+}
+
+.skills-code {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skills-code .terminal {
+  box-shadow: var(--shadow-card);
+}
+
+.skills-code pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-item {
+    font-size: 1.25rem;
+  }
+
+  .hex-item {
+    width: 100px;
+    height: 60px;
+  }
+
+  .hex-item span {
+    font-size: 0.625rem;
+  }
+}

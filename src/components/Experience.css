@@ -1,0 +1,275 @@
+.experience {
+  position: relative;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto var(--space-2xl);
+  padding: var(--space-xl) 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--color-cyan) 0%,
+    var(--color-purple) 50%,
+    var(--color-orange) 100%
+  );
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.timeline-item.left {
+  left: 0;
+  padding-right: var(--space-2xl);
+}
+
+.timeline-item.right {
+  left: 50%;
+  padding-left: var(--space-2xl);
+}
+
+.timeline-dot {
+  position: absolute;
+  top: var(--space-xl);
+  width: 50px;
+  height: 50px;
+  background: var(--color-surface);
+  border: 3px solid var(--color-cyan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 10;
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.timeline-item.left .timeline-dot {
+  right: -25px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -25px;
+}
+
+.timeline-content {
+  position: relative;
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: var(--space-xl);
+  width: 20px;
+  height: 20px;
+  background: var(--color-surface);
+  border: var(--border-subtle);
+  transform: rotate(45deg);
+}
+
+.timeline-item.left .timeline-content::before {
+  right: -10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.timeline-item.right .timeline-content::before {
+  left: -10px;
+  border-right: none;
+  border-top: none;
+}
+
+.experience-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.experience-company {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.experience-role {
+  font-size: 1rem;
+  color: var(--color-cyan);
+  font-weight: 500;
+}
+
+.experience-meta {
+  text-align: right;
+}
+
+.experience-period {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.experience-location {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.experience-description {
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.experience-achievements {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.experience-achievements li {
+  display: flex;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.achievement-marker {
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.education-section {
+  max-width: 600px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.education-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  justify-content: center;
+}
+
+.education-icon {
+  font-size: 1.5rem;
+}
+
+.education-card {
+  padding: var(--space-xl);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.degree {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.school {
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+}
+
+.edu-period {
+  font-size: 0.875rem;
+  color: var(--color-cyan);
+  font-weight: 500;
+}
+
+.education-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.resume-cta {
+  text-align: center;
+}
+
+.resume-cta .btn {
+  display: inline-flex;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+  }
+
+  .timeline-dot {
+    left: -5px !important;
+    right: auto !important;
+  }
+
+  .timeline-content::before {
+    left: -10px !important;
+    right: auto !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-left: var(--border-subtle) !important;
+    border-bottom: var(--border-subtle) !important;
+  }
+
+  .experience-header-card {
+    flex-direction: column;
+  }
+
+  .experience-meta {
+    text-align: left;
+  }
+}

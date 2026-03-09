@@ -1,0 +1,167 @@
+.contact {
+  background: linear-gradient(
+    180deg,
+    var(--color-void) 0%,
+    var(--color-deep) 100%
+  );
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.contact-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-tertiary);
+  max-width: 500px;
+  margin: var(--space-lg) auto 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.info-card {
+  padding: var(--space-xl);
+}
+
+.info-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.info-description {
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: 8px;
+  transition: all var(--transition-base);
+}
+
+.info-item:hover {
+  background: var(--color-elevated);
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-elevated);
+  border-radius: 8px;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.info-value {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--color-green);
+  padding: var(--space-md);
+  background: var(--color-green-dim);
+  border-radius: 8px;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-green);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.contact-terminal {
+  height: fit-content;
+}
+
+.contact-terminal .terminal-body {
+  font-size: 0.8125rem;
+}
+
+.contact-terminal .prompt {
+  color: var(--color-cyan);
+}
+
+.contact-terminal .output {
+  color: var(--text-secondary);
+  padding-left: var(--space-md);
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

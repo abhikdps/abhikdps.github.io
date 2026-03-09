@@ -1,0 +1,97 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.orbs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  right: -200px;
+  animation: float-orb 20s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  bottom: 20%;
+  left: -150px;
+  animation: float-orb 25s ease-in-out infinite reverse;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  right: 10%;
+  animation: float-orb 30s ease-in-out infinite;
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(50px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-30px, 50px) scale(0.9);
+  }
+  75% {
+    transform: translate(-50px, -20px) scale(1.05);
+  }
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-cyan-dim),
+    transparent
+  );
+  opacity: 0.5;
+}
+
+@keyframes page-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app > main {
+  animation: page-reveal 1s ease-out;
+}
