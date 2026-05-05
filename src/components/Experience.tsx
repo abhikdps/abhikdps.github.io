@@ -247,7 +247,7 @@ function Experience() {
 
         <div className="resume-cta">
           <a
-            href="/Abhinav's-Resume-2024.pdf"
+            href="/Abhinav-Anand.pdf"
             className="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
