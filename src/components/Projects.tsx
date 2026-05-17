@@ -45,6 +45,19 @@ const projects = [
   },
   {
     id: 4,
+    title: "Universal Adversarial Mesh",
+    description:
+      "A multi-agent orchestration framework for autonomous Red/Blue team operations—recon, exploit, detect, remediate, and validate across infrastructure, apps, and cloud via pluggable modules over NATS.",
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&h=800&fit=crop",
+    tags: ["Go", "NATS", "eBPF", "Security", "Red/Blue Team"],
+    github: "https://github.com/abhikdps/universal-adversarial-mesh",
+    live: "",
+    featured: false,
+    metrics: ["9-stage loop", "Closed-loop patch", "Pluggable modules"],
+  },
+  {
+    id: 5,
     title: "Netflix Clone",
     description:
       "A full-stack clone of the Netflix application with authentication, user profiles, and video streaming.",
@@ -56,7 +69,7 @@ const projects = [
     metrics: ["Full Auth", "NoSQL", "Deployed"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Ansible Backstage Plugins",
     description:
       "Backstage plugins that bring Ansible Automation Platform into the developer portal—job templates, inventories, catalog sync, and self-service automation workflows.",
