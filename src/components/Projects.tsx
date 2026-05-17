@@ -32,6 +32,18 @@ const projects = [
   },
   {
     id: 3,
+    title: "Zero-Overhead Load Balancer",
+    description:
+      "A Layer 4 (TCP/UDP) load balancer that routes packets at the NIC driver level using eBPF/XDP, bypassing the Linux kernel networking stack for minimal CPU overhead.",
+    image: "https://images.unsplash.com/photo-1544197150-4bfea23f8ddf?w=800",
+    tags: ["eBPF", "XDP", "C", "libbpf", "Networking", "Load Balancing"],
+    github: "https://github.com/abhikdps/zero-overhead-lb",
+    live: "",
+    featured: true,
+    metrics: ["300K+ PPS", "Kernel bypass", "Hitless reload"],
+  },
+  {
+    id: 4,
     title: "Netflix Clone",
     description:
       "A full-stack clone of the Netflix application with authentication, user profiles, and video streaming.",
@@ -39,8 +51,20 @@ const projects = [
     tags: ["Next.js", "React", "MongoDB", "OAuth", "TypeScript"],
     github: "https://github.com/abhikdps/netflix-clone/",
     live: "https://netflix-clone-six-phi-87.vercel.app/auth",
-    featured: true,
+    featured: false,
     metrics: ["Full Auth", "NoSQL", "Deployed"],
+  },
+  {
+    id: 5,
+    title: "Ansible Backstage Plugins",
+    description:
+      "Backstage plugins that bring Ansible Automation Platform into the developer portal—job templates, inventories, catalog sync, and self-service automation workflows.",
+    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800",
+    tags: ["TypeScript", "Backstage", "Ansible", "React", "AAP"],
+    github: "https://github.com/ansible/ansible-backstage-plugins",
+    live: "",
+    featured: false,
+    metrics: ["Catalog sync", "Self-service", "Scaffolder"],
   },
 ];
 
